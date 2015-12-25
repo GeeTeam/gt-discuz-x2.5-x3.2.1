@@ -167,8 +167,14 @@ JS;
             
             switch ($cur_mod) {
                 case 'register':
+                    $output = " <div id='$geetest_id' class='rfm' style='$style'><table><tbody><tr><th><div><span class='rq'>*</span>&#28369;&#21160;&#39564;&#35777;:</div></th><td>";
+                    
+                    $output.= $geetestlib->get_widget($this->keyset['captchaid'], 'float');
+                    $output.= '</td></tr></tbody></table></div>';
+                    break;
+                    
                 case 'logging':
-                    $output = " <div id='$geetest_id' class='rfm' style='$style'><table><tbody><tr><th><div>*&#28369;&#21160;&#39564;&#35777;:</div></th><td>";
+                    $output = " <div id='$geetest_id' class='rfm' style='$style'><table><tbody><tr><th><div>&#28369;&#21160;&#39564;&#35777;:</div></th><td>";
                     
                     $output.= $geetestlib->get_widget($this->keyset['captchaid'], 'float');
                     $output.= '</td></tr></tbody></table></div>';
